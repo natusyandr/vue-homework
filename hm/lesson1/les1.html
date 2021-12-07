@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="css/flex-grid.css">
   </head>
   <body class="container">
-    <section id="app" class="flex-column">
-      <div v-for="cat in cats" class="card">
+    <section id="app" class="flex-row">
+      <div v-for="cat in cats" class="col-4">
         <h2>{{cat.name}}</h2>
         <p>{{cat.age}}</p>
         <p>{{cat.color}}</p>
