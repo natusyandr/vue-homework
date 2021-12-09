@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Статьи</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/flex-grid.css">
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body class="container">
+    <section id="articles" class="container">
+         <span class="tab" v-for="title in tabsTitles" v-on:click="currentTabTitle = title">
+             {{ title }}</span>
+        <form>
+          <input type="text" placeholder="Поиск" v-model="search">
+        </form>
+         <div class="grid" :class="{hide: currentTabTitle === 'Отобразить списком'}">
+             <div v-for="article in articles">
+                 <span>{{ article.title }}</span>
+                 <img :src="article.image" :alt="article.title">
+             </div>
+         </div>
+         <div class="link" :class="{hide: currentTabTitle === 'Отобразить сеткой'}">
+             <div v-for="article in articles">
+                 <img :src="article.image" :alt="article.title">
+                 <span>{{ article.title }}</span>
+             </div>
+         </div>
+     </section>
+    <script src="js/title.js"></script>
+  </body>
+</html>
