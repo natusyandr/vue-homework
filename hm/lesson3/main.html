@@ -7,10 +7,17 @@
     <script src="https://unpkg.com/vue@next"></script>
   </head>
   <body>
-    <section id="app">
-      <div v-for="good in goods">{{ good.title }}</div>
-      <div v-for="good in goods">{{ good.price }}</div>
-    </section>
+    <section id="app" class="container">
+           <p>Отсортировать:</p>
+           <span v-for="title in tabsTitles" v-on:click="currentTabTitle = title">
+               {{ title }}</span>
+       <div>
+           <div v-for="good in getSortedArr()" :class="defineClass(good)" class="card">
+               <h4>{{ good.title }}</h4>
+               <p>{{ good.price }}</p>
+           </div>
+       </div>
+   </section>
     <script src="js/res.js"></script>
   </body>
 </html>

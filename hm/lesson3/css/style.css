@@ -1,0 +1,46 @@
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#app {
+    margin-top: 3rem;
+}
+
+#app > div {
+    display: flex;
+    margin-top: 1rem;
+}
+
+#app span {
+    display: inline-block;
+    border: 1px solid black;
+    background-color: #C8C8C8;
+    border-radius: 2px;
+    text-align: center;
+    margin: 0 10px;
+}
+
+#app > p {
+    display: inline;
+}
+
+.card {
+    flex: 1;
+    text-align: center;
+}
+
+.zero {
+    border: 1px solid black;
+    background-color: #FF7676;
+}
+
+.not-many {
+    border: 1px solid black;
+    background-color: #F2EA6C;
+}
+
+.many {
+    border: 1px solid black;
+    background-color: #99F26C;
+}
