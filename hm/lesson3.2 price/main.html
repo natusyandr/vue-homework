@@ -3,8 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title>Главная</title>
+    <script src="https://unpkg.com/vue@next"></script>
   </head>
   <body>
-    <script></script>
+    <div id="app">
+      <form @submit.prevent="submitForm">
+      <fieldset>
+          <p>Выберите услуги из списка</p>
+          <div v-for="service in services">
+              <label>
+                  <input :value="service.id" type="checkbox" name="price[]"
+                         v-model="selected">
+                  {{service.title}}
+              </label>
+          </div>
+      </fieldset>
+      <div>
+          <p>Итого:</p>
+          <p>{{userSum}}</p>
+      </div>
+      </form>
+    </div>
+    <script src="js/res.js"></script>
   </body>
 </html>
